@@ -1,0 +1,209 @@
+<style>
+    body,
+    html {
+        background-color: #FFFCF2;
+        background-size: cover;
+        font-family: Poppins;
+        margin-left: 15px;
+        font-size: 15px;
+    }
+
+
+    svg.material-icons {
+        height: 24px;
+        width: auto;
+    }
+
+    svg.material-icons:not(:last-child) {
+        margin-right: 8px;
+    }
+
+
+    .card svg.material-icons path {
+        fill: #FF9067;
+    }
+
+
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+    }
+
+    .card {
+        all: unset;
+        border-radius: 6px;
+        color: #FF9067;
+        border: 1px solid #FF9067;
+        background-color: white;
+        max-width: 200px;
+        margin: 0 8px 16px;
+        padding: 16px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        line-height: 24px;
+
+    }
+
+    .card-container .card:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .card.card-small {
+        height: 16px;
+        max-width: 100%;
+    }
+
+
+    .card-container .card:not(.highlight-card) {
+        cursor: pointer;
+    }
+
+    .card-container .card:not(.highlight-card):hover {
+        box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+        background-color: #FF9067;
+        color: white;
+    }
+
+    .form-control {
+        height: 50px;
+        max-width: 400px;
+    }
+
+    .img {
+        width: 40px;
+        height: 40px;
+        float: right;
+    }
+
+    .p {
+        float: right;
+        font-size: 13px;
+
+    }
+
+    #contenu {
+        float: right;
+        width: 83%;
+    }
+
+    input::placeholder {
+        color: black;
+        font-size: 12px;
+    }
+</style>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    <div id="contenu" style="background-color: #FFFCF2;
+    background-size: cover;">
+        <div class="card-container">
+            <span style="font-size:25px ;font-weight:530;">Jean Dupont</span>
+            <button class="card card-small" tabindex="0">
+                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+                <span>Contact @Mail</span>
+            </button>
+        </div>
+        <br><br>
+        <span>1.Connexion </span>
+        <br><br>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="exampleInputEmail1" style="color: black;">Email</label><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16" style="float: left;color: gray;margin-top: 15px;">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Bernard.Tartuf@Chrulille.Fr" style="background-color:#FFFCF2;">
+            </div>
+            <div class="col">
+                <label for="exampleInputPassword1" style="color: black;">N°RPPS</label><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16" style="float: left;color: gray;margin-top: 15px;">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="1547865421"
+                    style="background-color:#FFFCF2;">
+                <br><br>
+            </div>
+        </div>
+        <span>2.Information Personnelles </span>
+        <br><br>
+        <div class="row mb-3">
+            <div class="col">
+                <label for="exampleInputEmail1" style="color: black;">Nom</label><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16" style="float: left;color: gray;margin-top: 15px;">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Bernard" style="background-color:#FFFCF2;">
+            </div>
+            <div class="col">
+                <label for="exampleInputPassword1" style="color: black;">Prénom</label><br>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16" style="float: left;color: gray;margin-top: 15px;">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Tatuf"
+                    style="background-color:#FFFCF2;">
+            </div></div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="exampleInputEmail1" style="color: black;">Spécialié</label><br>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16" style="float: left;color: gray;margin-top: 15px;">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Neurologue" style="background-color:#FFFCF2;">
+                </div>
+                <div class="col">
+                    <label for="exampleInputPassword1" style="color: black;">NRI Liée</label><br>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-person-circle" viewBox="0 0 16 16" style="float: left;color: gray;margin-top: 15px;">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                        <path fill-rule="evenodd"
+                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                    </svg>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="NRI De Lille"
+                        style="background-color:#FFFCF2;">
+                </div>
+                </div>
+                <br><br>
+                <div class="card-container" style="justify-content: center;">
+                    <button class="card card-small" tabindex="0">
+                        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                        </svg>
+                        <span>Supprimer L'utilisateur</span>
+                    </button>
+                    <button class="card card-small" tabindex="0">
+                        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                        </svg>
+                        <span>Save Updates</span>
+                    </button>
+                </div>
+            </div>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<style>
+  body,html {
+    background-color: #FFFCF2;
+    background-size: cover;
+    font-family: Poppins;
+    margin-left: 15px;
+    font-size: 15px;
+  }
+
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+
+  .card svg.material-icons path {
+    fill: #FF9067;
+  }
+
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 6px;
+    color: #FF9067;
+    border: 1px solid #FF9067;
+    background-color: white;
+    max-width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 24px;
+
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .card.card-small {
+    height: 16px;
+    max-width: 100%;
+  }
+
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color: #FF9067;
+    color: white;
+  }
+
+  .form-control {
+    height: 50px;
+    max-width: 850px;
+  }
+
+  .img {
+    width: 40px;
+    height: 40px;
+    float: right;
+  }
+
+  .p {
+    float: right;
+    font-size: 13px;
+
+  }
+
+  .card-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 1000px;
+  }
+
+  .card-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 1000px;
+  }
+
+  #contenu {
+    float: right;
+    width: 83%;
+  }
+
+  input::placeholder {
+    color: gray;
+  }
+
+  button.calendar, button.calendar:active {
+  width: 2.75rem;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAcCAYAAAAEN20fAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEUSURBVEiJ7ZQxToVAEIY/YCHGxN6XGOIpnpaEsBSeQC9ArZbm9TZ6ADyBNzAhQGGl8Riv4BLAWAgmkpBYkH1b8FWT2WK/zJ8ZJ4qiI6XUI3ANnGKWBnht2/ZBDRK3hgVGNsCd7/ui+JkEIrKtqurLpEWaphd933+IyI3LEIdpCYCiKD6HcuOa/nwOa0ScJEnk0BJg0UTUWJRl6RxCYEzEmomsIlPU3IPW+grIAbquy+q6fluy/28RIBeRMwDXdXMgXLj/B2uimRXpui4D9sBeRLKl+1N+L+t6RwbWrZliTTTr1oxYtzVWiTQAcRxvTX+eJMnlUDaO1vpZRO5NS0x48sIwfPc87xg4B04MCzQi8hIEwe4bl1DnFMCN2zsAAAAASUVORK5CYII=') !important;
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: center;
+}
+
+/* Sortable table demo */
+
+th[sortable] {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+th[sortable].desc:before, th[sortable].asc:before {
+  content: '';
+  display: block;
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAmxJREFUeAHtmksrRVEUx72fH8CIGQNJkpGUUmakDEiZSJRIZsRQmCkTJRmZmJgQE0kpX0D5DJKJgff7v+ru2u3O3vvc67TOvsdatdrnnP1Y///v7HvvubdbUiIhBISAEBACQkAICAEhIAQ4CXSh2DnyDfmCPEG2Iv9F9MPlM/LHyAecdyMzHYNwR3fdNK/OH9HXl1UCozD24TCvILxizEDWIEzA0FcM8woCgRrJCoS5PIwrANQSMAJX1LEI9bqpQo4JYNFFKRSvIgsxHDVnqZgIkPnNBM0rIGtYk9YOOsqgbgepRCfdbmFtqhFkVEDVPjJp0+Z6e6hRHhqBKgg6ZDCvYBygVmUoEGoh5JTRvIJwhJo1aUOoh4CLPMyvxxi7EWOMgnCGsXXI1GIXlZUYX7ucU+kbR8NW8lh3O7cue0Pk32MKndfUxQFAwxdirk3fHappAnc0oqDPzDfGTBrCfHP04dM4oTV8cxr0SVzH9FF07xD3ib6xCDE+M+aUcVygtWzzbtGX2rPBrEUYfecfQkaFzYi6HjVnGBdtL7epqAlc1+jRdAap74RrnPc4BCijttY2tRcdN0g17w7HqZrXhdJTYAuS3hd8z+vKgK3V1zWPae0mZDMykadBn1hTQBLnZNwVrJpSe/NwEeDsEwCctEOsJTsgxLvCqUl2ACftEGvJDgjxrnBqkh3ASTvEWrIDQrwrnJpkB3DSDrGW7IAQ7wqnJtkBnLRztejXXVu4+mxz/nQ9jR1w5VB86ejLTFcnnDwhzV+F6T+CHZlx6THSjn76eyyBIOPHyDakhBAQAkJACAgBISAEhIAQYCLwC8JxpAmsEGt6AAAAAElFTkSuQmCC') no-repeat;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+  float: left;
+  margin-left: -22px;
+}
+
+th[sortable].desc:before {
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+}
+
+/* Filtering table demo */
+ngbd-table-filtering span.ngb-highlight {
+  background-color: yellow;
+}
+
+/* Complete table demo */
+ngbd-table-complete span.ngb-highlight {
+  background-color: yellow;
+}
+
+ngb-carousel .picsum-img-wrapper {
+  position: relative;
+  height: 0;
+  padding-top: 55%; /* Keep ratio for 900x500 images */
+}
+
+ngb-carousel .picsum-img-wrapper>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+</style>
+<html>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <br><br>
+  <div id="contenu" style="background-color: #FFFCF2;
+  background-size: cover;">
+    <div class="card-container">
+      <button class="card card-small" tabindex="0">
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+        </svg>
+        <span>Add New Balise</span>
+      </button>
+      <button class="card card-small" tabindex="1">
+        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+        </svg>
+        <span>Add Balise To UNV</span>
+      </button>
+      </div>
+      <br>
+        <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <div class="card-container">
+        <input class="form-control me-2" type="search" placeholder="&#61442;  Chercher une balise" aria-label="Search"
+          style="font-family:FontAwesome"><br>
+        <button class="card card-small" tabindex="2">
+          <span style="font-weight: bold"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+              fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+              <path
+                d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+            </svg>&nbsp; &nbsp;Filter</span>
+        </button>
+    </div>
+    <br>
+    <section style="display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      margin-top: 16px;">
+      
+      <button class="card card-small"
+        style="width:200px;height:300px;border: 0.5px solid rgba(255, 255, 255, .3);box-shadow: 1px 1px 1px 1px gray">
+        <div style="font-size:14px ;">
+          <a routerlink=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-pencil-fill" viewBox="0 0 16 16" style="float:right; color:black">
+              <path
+                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+            </svg></a>
+          <br><br>
+          <div style="text-align:center;"><img src="assets/b.JPG" class="img1" height="80px" width="80px"
+              style="position:center;"><br><span
+              style="color: black;font-weight: bold;font-size: 15px; text-align: center;"> Balise UNV 1 </span>
+            <br><span style="color:red;">inactive</span><br><br><br>
+          </div>
+          <span style="color:grey;">Batterie : </span> <span style="color:black;font-weight: bold;">78%</span><br>
+          <span style="color:grey;">Début du trasfert : </span> <span style="color:black;font-weight: bold;"> 14:25
+            PM</span><br>
+          <span style="color:grey;">Destination : </span> <span style="color:black;font-weight: bold;"> NRI de
+            Lille</span>
+        </div>
+      </button>
+      <button class="card card-small"
+        style="width:200px;height:300px;border: 0.5px solid rgba(255, 255, 255, .3);box-shadow: 1px 1px 1px 1px gray">
+        <div style="font-size:14px ;">
+          <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-pencil-fill" viewBox="0 0 16 16" style="float:right; color:black">
+              <path
+                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z" />
+            </svg></a>
+          <br><br>
+          <div style="text-align:center;"><img src="assets/b.JPG" class="img1" height="80px" width="80px"
+              style="position:center;"><br><span
+              style="color: black;font-weight: bold;font-size: 15px; text-align: center;"> Balise UNV 2 </span>
+            <br><span style="color:#2BBF6B;">inactive</span><br><br><br>
+          </div>
+          <span style="color:grey;">Batterie : </span> <span style="color:black;font-weight: bold;">78%</span><br>
+          <span style="color:grey;">Début du trasfert : </span> <span style="color:black;font-weight: bold;"> 14:25
+            PM</span><br>
+          <span style="color:grey;">Destination : </span> <span style="color:black;font-weight: bold;"> NRI de
+            Lille</span>
+        </div>
+      </button>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<style>
+  body,html {
+    background-color: #FFFCF2;
+    background-size: cover;
+    font-family: Poppins;
+    margin-left: 15px;
+    font-size: 15px;
+  }
+
+
+  svg.material-icons {
+    height: 24px;
+    width: auto;
+  }
+
+  svg.material-icons:not(:last-child) {
+    margin-right: 8px;
+  }
+
+
+  .card svg.material-icons path {
+    fill: #FF9067;
+  }
+
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 6px;
+    color: #FF9067;
+    border: 1px solid #FF9067;
+    background-color: white;
+    max-width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 24px;
+
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  .card.card-small {
+    height: 16px;
+    max-width: 100%;
+  }
+
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+    background-color: #FF9067;
+    color: white;
+  }
+
+  .form-control {
+    height: 50px;
+    max-width: 850px;
+  }
+
+  .img {
+    max-width: 30px;
+    height: auto;
+    float: right;
+  }
+
+  .p {
+    float: right;
+    font-size: 13px;
+
+  }
+
+  .card-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 1000px;
+  }
+
+  .card-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-right: 1000px;
+  }
+
+  #contenu {
+    float: right;
+    width: 83%;
+  }
+
+  input::placeholder {
+    color: gray;
+  }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: white;
+        max-width: 1030px;
+        box-shadow: 0 2px 15px rgba(212, 208, 208, 0.35);
+        border-radius: 5px;
+        margin-left: 5px;
+        margin-top: 5px;
+
+    }
+
+    .navl {
+        color: black;
+        height: 60px;
+        top: 20px;
+        border-bottom: solid 2px rgba(212, 208, 208, 0.35);
+
+
+    }
+</style>
+<html lang="fr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body>
+    <br><br>
+    <div id="contenu" style="background-color: #FFFCF2;
+  background-size: cover;">
+        <div class="card-container">
+            <button class="card card-small" tabindex="0">
+                <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" max-width="24" height="24"
+                    viewBox="0 0 24 24">
+                    <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                </svg>
+                <span>Add New User</span>
+            </button>
+            </div>
+            <br>
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                    <div class="card-container">
+                <input class="form-control me-2" type="search" placeholder="&#61442;  Chercher utilisateurs"
+                    aria-label="Search" style="font-family:FontAwesome"><br>
+                <button class="card card-small" tabindex="0">
+                    <span style="font-weight: bold"><svg xmlns="http://www.w3.org/2000/svg" max-width="20" height="20"
+                            fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                            <path
+                                d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                        </svg>&nbsp; &nbsp;Filter</span>
+                </button>
+        </div>
+        <br>
+            <ul class="nav nav-pills nav-justified flex-column">
+                <br>
+                <li class="navl" style="margin-left:30px;">
+                    <span style="font-size:15px;">
+                        Jean Dupont
+                    </span>
+                    <a routerLink=""><img src="assets/c.png" class="img"></a>
+                    <a routerLink="updateuser"><img src="assets/y.png" class="img"></a>
+                </li>
+
+                <br>
+                <li class="navl" style="margin-left:30px;">
+                    <span style="font-size:15px;">
+                        Calud Davinci
+                    </span>
+                    <a routerLink=""><img src="assets/c.png" class="img"></a>
+                    <a routerLink=""><img src="assets/y.png" class="img"></a>
+                </li>
+                <br>
+                <li class="navl" style="margin-left:30px;">
+                    <span style="font-size:15px ;">
+                        Thomas Dupont
+                    </span>
+                    <a routerLink=""><img src="assets/c.png" class="img"></a>
+                    <a routerLink=""><img src="assets/y.png" class="img"></a>
+                </li>
+                <br>
+                <li class="navl" style="margin-left:30px;">
+                    <span style="font-size:15px ;">
+                        Jean Dupont
+                    </span>
+                    <a routerLink=""><img src="assets/c.png" class="img"></a>
+                    <a routerLink=""><img src="assets/y.png" class="img"></a>
+                </li>
+            </ul>
+    </div>
+</body>
+
+</html>

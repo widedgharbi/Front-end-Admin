@@ -1,0 +1,198 @@
+<style>
+  body {
+    background-color: #FFFCF2;
+    background-size: cover;
+    margin-left: 15px;
+    font-family: Poppins;
+    font-size: 13px;
+    max-width: 100%;
+  }
+
+  .form-control {
+    height: 50px;
+    max-width: 800px;
+  }
+
+  .img {
+    max-width: 70%;
+    width: 40px;
+    float: right;
+  }
+
+  .p {
+    float: right;
+    font-size: 11px;
+
+  }
+
+  .card-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    padding-right: 10%;
+  }
+
+  .card-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    color: black;
+    position: fixed;
+    top: 9%;
+    font-size: 11px;
+  }
+
+  .card-container3 {
+    flex-wrap: wrap;
+    font-weight: bold;
+    color: black;
+    position: fixed;
+    top: 25x;
+  }
+
+  .navbar {
+    border-radius: 7px;
+    display: inline-block;
+    flex-wrap: wrap;
+    background-color: #FF9067;
+    height: auto;
+    width: 250px;
+    max-width: 100%;
+  }
+
+  .nav-link {
+    color: white;
+    height: 60px;
+    width: 230px;
+    max-width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+    text-align: center;
+    margin-top: 18px;
+    text-align: justify;
+    
+  }
+
+  .nav-link:hover {
+    border-left: 5px solid white;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, .3);
+    height: 60px;
+    max-width: 220px;
+
+  }
+
+  #menu {
+    float: left;
+    max-width: 17%;
+    position: fixed;
+  }
+
+  input::placeholder {
+    color: gray;
+  }
+
+  #active {
+    border-left: 5px solid white;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, .3);
+    height: 60px;
+    max-width: 220px;
+  }
+
+  .nav-link{
+    margin-left: 2%;
+  }
+</style>
+
+<html lang="fr">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <br>
+  <div id="entete">    
+    <img src="assets/rl.png" class="card-container3" style="max-width: 10%;height: auto;">
+    <div class="card-container1">
+      <a href=""><img src="assets/p.png" class="img" alt="Profile" /> <br><br> <span class="p"> Profile
+        </span></a>&nbsp; &nbsp; &nbsp;
+      <a href="romain"><img src="assets/lo.png" class="img" alt="Logout" /> <br><br> <span class="p"> Logout </span></a>
+    </div>
+    <div class="card-container2">
+      <span>Dashboard</span>
+    </div>
+  </div>
+  <br>
+  <div id="main">
+    <div id="menu">
+      <nav class="navbar" (click)="clickEvent()">
+        <ul class="nav nav-pills nav-justified flex-column">
+          <li class="nav-item">
+            <a style="text-align: justify; text-align: left;" class="nav-link" routerLink="updateuser" id="active">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
+              </svg>&nbsp; <span>Home Page</span></a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: justify; text-align: left;" class="nav-link" routerLink="balise">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-grid-1x2-fill" viewBox="0 0 16 16">
+                <path
+                  d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1V1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-5z" />
+              </svg>&nbsp; <span>Balises</span></a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: justify; text-align: left;" class="nav-link" routerLink="nri">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-asterisk" viewBox="0 0 16 16">
+                <path
+                  d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
+              </svg>&nbsp; <span>NRI</span></a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: justify; text-align: left;" class="nav-link" routerLink="unv">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+                <path
+                  d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+              </svg>&nbsp; <span>UNV</span></a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: justify; text-align: left;" class="nav-link" routerLink="zone">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+              </svg>&nbsp; <span>Zones</span></a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: justify; text-align: left;" class="nav-link" routerLink="speciality">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-clipboard2-pulse-fill" viewBox="0 0 16 16">
+                <path
+                  d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z" />
+                <path
+                  d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5ZM9.98 5.356 11.372 10h.128a.5.5 0 0 1 0 1H11a.5.5 0 0 1-.479-.356l-.94-3.135-1.092 5.096a.5.5 0 0 1-.968.039L6.383 8.85l-.936 1.873A.5.5 0 0 1 5 11h-.5a.5.5 0 0 1 0-1h.191l1.362-2.724a.5.5 0 0 1 .926.08l.94 3.135 1.092-5.096a.5.5 0 0 1 .968-.039Z" />
+              </svg>&nbsp; <span>Speciality</span></a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: justify; text-align: left;" class="nav-link" routerLink="user">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
+                viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+              </svg>&nbsp; <span>Utilisateurs</span></a>
+          </li>
+          <li class="nav-item">
+            <a style="text-align: justify; text-align: left;" class="nav-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-person-video2" viewBox="0 0 16 16">
+                <path d="M10 9.05a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                <path
+                  d="M2 1a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2ZM1 3a1 1 0 0 1 1-1h2v2H1V3Zm4 10V2h9a1 1 0 0 1 1 1v9c0 .285-.12.543-.31.725C14.15 11.494 12.822 10 10 10c-3.037 0-4.345 1.73-4.798 3H5Zm-4-2h3v2H2a1 1 0 0 1-1-1v-1Zm3-1H1V8h3v2Zm0-3H1V5h3v2Z" />
+              </svg>&nbsp; <span>Admins</span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</body>
+
+</html>
